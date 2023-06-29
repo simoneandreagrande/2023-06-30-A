@@ -1,6 +1,7 @@
 package it.polito.tdp.exam.model;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class People {
 
@@ -163,9 +164,10 @@ public class People {
         this.deathDate=deathDate;
     }
 
+
 	@Override
 	public int hashCode() {
-		return playerID.hashCode();
+		return Objects.hash(playerID);
 	}
 
 	@Override
@@ -177,7 +179,7 @@ public class People {
 		if (getClass() != obj.getClass())
 			return false;
 		People other = (People) obj;
-		return this.equals(other.playerID);
+		return Objects.equals(playerID, other.playerID);
 	}
 
 	@Override
