@@ -2,7 +2,7 @@ package it.polito.tdp.exam.model;
 
 import java.util.Objects;
 
-public class Dettaglio {
+public class Dettaglio implements Comparable<Dettaglio> {
 	private Integer anno;
 	private Integer peso;
 	
@@ -42,6 +42,11 @@ public class Dettaglio {
 		super();
 		this.anno = anno;
 		this.peso = peso;
+	}
+	
+	@Override
+	public int compareTo(Dettaglio o) {
+		 return Double.compare(o.peso, this.peso);
 	}
 	
 	

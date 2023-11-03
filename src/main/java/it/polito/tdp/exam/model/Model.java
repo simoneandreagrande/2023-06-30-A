@@ -91,6 +91,8 @@ public class Model {
 			DefaultWeightedEdge arco = this.grafo.getEdge(anno, nodo);
 			result.add(new Dettaglio(nodo, (int)this.grafo.getEdgeWeight(arco)) );
 		}
+		
+		Collections.sort(result);
 		return result;
 	}
 
