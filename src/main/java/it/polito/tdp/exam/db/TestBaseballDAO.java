@@ -10,9 +10,10 @@ public class TestBaseballDAO {
 		// TODO Auto-generated method stub
 		BaseballDAO dao = new BaseballDAO();
 
-		List<People> players = dao.readAllPlayers();
-		
-		System.out.println(players.size());
+//		List<People> players = dao.readAllPlayers();
+		List<String> teams = dao.getTeamsNames();
+		System.out.println(teams.size());
+		System.out.println(teams);
 	}
 
 }

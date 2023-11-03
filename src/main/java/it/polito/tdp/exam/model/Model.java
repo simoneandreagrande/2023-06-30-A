@@ -82,9 +82,10 @@ public class Model {
 	
 	
 	public List<Dettaglio> getDettagli(int anno) {
+		
+		// dato un anno, trova i vicini (adiacenti) e crea una lista di Dettaglio associata a quell'anno.
 		List<Dettaglio> result = new ArrayList<Dettaglio>();
 		List<Integer> adiacenti = Graphs.neighborListOf(this.grafo, anno);
-		
 		
 		for(Integer nodo : adiacenti) {
 			DefaultWeightedEdge arco = this.grafo.getEdge(anno, nodo);
