@@ -182,6 +182,8 @@ public class BaseballDAO {
 	}
 
 	
+	
+	// metodo per vertici: anni
 	public List<Integer> getVertici(String name){
 		String sql = "SELECT DISTINCT t.year "
 				+ "FROM teams t "
